@@ -25,7 +25,7 @@ The main pieces of functionality the project offers:
 
 ## Project Structure (Ver 0.0.01)
 
-![Nairobi Shop   Cafe Cloest points and Scope](https://user-images.githubusercontent.com/88956151/129481293-14d38ddf-3411-441f-a0b7-d4b1baecc432.png)
+
 
 
 ## Build Status
