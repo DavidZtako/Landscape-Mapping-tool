@@ -16,11 +16,12 @@ The main pieces of functionality the project offers:
 
 * **Public Transport Platform Distribution**
 
-![Interchanges by different subway operators](https://user-images.githubusercontent.com/88956151/130328736-ab550d85-8ead-4bd6-a183-2602ccde9747.jpg)
+
 
 * **Shared Subyway Interchange**
 
 
+![Interchanges by different subway operators](https://user-images.githubusercontent.com/88956151/130328736-ab550d85-8ead-4bd6-a183-2602ccde9747.jpg)
 
 ## Project Structure (Ver 0.0.01)
 
