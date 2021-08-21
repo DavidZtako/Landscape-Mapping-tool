@@ -10,9 +10,17 @@ This project is a landscape mapping tool analysising public transportation syste
 
 ## Project Features (Ver 0.0.01)
 The main pieces of functionality the project offers:
-* **Subway Entrances Density**
-* **Entrances Based on Operators**
+* **Subway Travel Stimulation**
+
+![Subway-Travel](https://user-images.githubusercontent.com/88956151/130328702-35406fa8-3afc-483c-839d-8f5dd5fc362f.gif)
+
+* **Public Transport Platform Distribution**
+
+![Interchanges by different subway operators](https://user-images.githubusercontent.com/88956151/130328736-ab550d85-8ead-4bd6-a183-2602ccde9747.jpg)
+
 * **Shared Subyway Interchange**
+
+
 
 ## Project Structure (Ver 0.0.01)
 
