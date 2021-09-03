@@ -16,6 +16,12 @@ The main pieces of functionality the project offers:
 
 * **Public Transport Platform Distribution**
 
+* **Approximate Boundary：A by-product of mapping research (Features Upgrade 01 August 2021)**
+The Approximate Boundary uses Bounding Box and Polyline Offset (By Arend van Waart) to create an approximate boundary for unclosed polyline feature from OSM files (eg: Walls / Parks with gates / etc.) Then containment tests can be operated through this closed approxmiate boundary. (eg: Testing whether points are within certain specific areas. )
+
+Mechanism 
+![Approximate Boundary](https://user-images.githubusercontent.com/88956151/131949100-d63a8ad1-ea69-49c8-89ca-625509645853.png)
+
 
 
 * **Shared Subyway Interchange**
