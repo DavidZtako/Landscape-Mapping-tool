@@ -1,12 +1,25 @@
-# Landscape-Mapping-Tool
+# Octopus Pathfinder 
+
 ![alt text](img/and-digital.png?v=3&s=200 "AND Digital")
 
 # README Guide
 
 This repository contains a guide for creating `README.md` files for new and existing repositories. The sections below include suggestions for different areas that can be covered in a README file where appropriate.
 
-## PROJECT DESCRIPTION (Ver 0.0.01)
+## PROJECT DESCRIPTION (Ver 0.5)
 This project is a landscape mapping tool analyzing public transportation systems based on Grasshopper of Rhinoceros. The main goal of this project is to develop a research pattern / Grasshopper battery compound that can test interactions of different parts of the public transportation system (Eg: Subways-Bus interchange / Subways operated by other companies / etc.). Data collected from Openstreetmap is the primary data source using for developing the mapping tool. The project mainly focuses on the relationships in the Tokyo railway transportation system, such as entrances density, lines and entrances from different operators, etc.  Meanwhile, visualization components would consistently discuss mapping visualization. Then the research process would introduce other sites to demonstrate the effectiveness of the project as the battery compound is finished.
+
+## Instructions for Use
+https://youtu.be/JItMxwUybDs
+Step_01: Download your own OSM file from Open Street Map and import the Path File.
+
+Step_02: Use the Grasshopper plugin Caribou to set the landscape elements as the starting point, the ending point, and the impenetrable boundary (This demo uses Building as the starting point, Healthcare as the ending point, and Tourism as the impenetrable boundary to simulate the need to find the nearest healthcare centre and avoid  crowded tourism area in case of an accident).
+
+Step_3: Draw a custom curve in the site as a starting point finder.
+
+Step_4: Move the number slider to find the starting points within one kilometre radius of a point on the curve (or adjust the finding radius as needed)
+
+Step_05: Input the generated path to the preview component, the colorized curves component or the line width component for the curve to get different results.
 
 ## Project Features (Ver 0.0.5) (Upgraded 25 September 2021)
 The main pieces of functionality the project offers:
