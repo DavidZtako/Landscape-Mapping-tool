@@ -1,18 +1,19 @@
 # Octopus Pathfinder 
 
-![alt text](img/and-digital.png?v=3&s=200 "AND Digital")
+
 
 # README Guide
 
 This repository contains a guide for creating `README.md` files for new and existing repositories. The sections below include suggestions for different areas that can be covered in a README file where appropriate.
 
-## PROJECT DESCRIPTION (Ver 0.5)
-This project is a landscape mapping tool analyzing public transportation systems based on Grasshopper of Rhinoceros. The main goal of this project is to develop a research pattern / Grasshopper battery compound that can test interactions of different parts of the public transportation system (Eg: Subways-Bus interchange / Subways operated by other companies / etc.). Data collected from Openstreetmap is the primary data source using for developing the mapping tool. The project mainly focuses on the relationships in the Tokyo railway transportation system, such as entrances density, lines and entrances from different operators, etc.  Meanwhile, visualization components would consistently discuss mapping visualization. Then the research process would introduce other sites to demonstrate the effectiveness of the project as the battery compound is finished.
+## PROJECT DESCRIPTION (Ver 0.8.5)
+Octopus Pathfinder is a landscape mapping tool analyzing public transportation systems based on Grasshopper of Rhinoceros. The main goal of Octopus Pathfinder is to generate the shortest paths between two target points that are blocked by impenetrable boundaries in order to explore the specific possibilities of the movement of a given object in the map. At this stage, the starting point, the endpoint, and the shortest path's impenetrable boundary are based on various landscape elements provided by the Grasshopper plugin Caribou. The process of generating the tool is based on a specific assumption: when an accident occurs in landscape element A, 'Building', people need to be moved to landscape element B, 'Healthcare', at the shortest possible speed and, in addition, avoid moving close to the heavily trafficked landscape element C, 'Tourism'. Based on this assumption, Octopus Pathfinder aims to find the shortest paths in the transport network controlled by these three landscape elements.
+
 
 ## Instructions for Use
 
 [![image](https://user-images.githubusercontent.com/88956151/136678810-0e0946c2-7c3d-4bab-bbae-ab53c50ce66a.png)](https://youtu.be/JItMxwUybDs)
-Click image to see the video
+Click image to watch the video
 
 
 Step_01: Download your own OSM file from Open Street Map and import the Path File.
@@ -30,17 +31,11 @@ The main pieces of functionality the project offers:
 
 ****I. The Shortest Path Component****
 
+* **The Shortest Path with Impenetrable Boundaries** 
+![Untitled-1](https://user-images.githubusercontent.com/88956151/136695545-66e3e24a-3b5e-4176-aec9-82c750e599a0.gif)
 
-* **Subway Travel Stimulation** (Before)
+Test on Nairobi site
 
-This previous version of Travel Stimulation uses manually selected features(subway stations + subway lines)through Caribou to analyze the shortest path between two subway stations. The mechanism of the grasshopper definition can be summarised as 1. Sorting subway stations 2. Connecting the closest points on subway networks with the subway stations 3. Looking for the shortest path along with subway networks following a specific rule (by certain operator, route, etc.) 4. Visualization (Manually export Image series for making animation)
-
-![Subway-Travel](https://user-images.githubusercontent.com/88956151/130328702-35406fa8-3afc-483c-839d-8f5dd5fc362f.gif)
-
-
-* **The Shortest Path with Impenetrable Boundaries** (After)
-
-* ![Shortest-Path-Animation](https://user-images.githubusercontent.com/88956151/134801940-8aca6cef-1b02-4f04-8fed-e41603dcc347.gif)
 
 The earlier versions of The Shortest Path component is not easy to operate because of manually selected features. Low effectiveness of Animation making/etc.), a new version of The Shortest Path component has been released to solve these mentioned problems. To do so, some logic of the Shortest Path component has to be changed.
 
@@ -49,37 +44,30 @@ The earlier versions of The Shortest Path component is not easy to operate becau
 3. **Animation** A new animation component has been provided for easier animation making process. This component uses a number slider to control a point on a customized curve that helps find the start points of the shortest path across road networks. Then series of images will be created while moving the number slider.
 4. **Visualization** The Visualization part mainly use a colour gradient to visualize the final result of the landscape mapping tool. 
 
-![Untitled-1](https://user-images.githubusercontent.com/88956151/134809513-3cfe97ab-c756-4fda-a2c3-e92ad8ac7fd9.jpg)
 
 
  **II. Hazard Mapping (Flooding)**
  
- The Hazard Mapping component is a variant of impenetrable boundaries. A topography file generated from open source DEM gets involved in the mapping process to create possible low land areas. The flood path result comes from the Groundhog Grasshopper add-in. But it is currently generating from a 30m DEM file, which means the current topography model is not accurate enough for analysis but only component exhibition. 
+Hazard Mapping is used to provide additional impenetrable boundary options. A topography file generated from open source DEM gets involved in the mapping process to create possible low land areas. The flood path result comes from the Groundhog Grasshopper add-in. But it is currently generating from a 30m DEM file, which means the current topography model is not accurate enough for analysis but only component exhibition. 
 ![ViewCapture20210926_215945](https://user-images.githubusercontent.com/88956151/134808462-0c0aeef7-d4b4-435d-924e-a8b7e4c6427a.jpg)
 ![ViewCapture20210926_220002](https://user-images.githubusercontent.com/88956151/134808470-70d26991-4875-49aa-8aae-628d2e858d2d.jpg)
 
 
-* **III. Shared Subyway Interchange**
 
-![Interchanges by different subway operators](https://user-images.githubusercontent.com/88956151/130328736-ab550d85-8ead-4bd6-a183-2602ccde9747.jpg)
+* **III. Approximate Boundary： A by-product of mapping research (Features Upgrade 01 August 2021)**
+Approximate boundary is a by-product of the Octopus Pathfinder development process. The main purpose of this component is to generate an approximate closed boundary for possible non-closed landscape features in the OSM file (walls that are not fully closed) for further analysis. Then users can operate containment tests through this closed approximate boundary. (e.g., Testing whether points are within some specific regions).
 
+![ViewCapture20211010_224343](https://user-images.githubusercontent.com/88956151/136694844-885c6944-a508-40c0-b25e-9f5452523ed7.jpg)
+Original Feature
 
-
-
-
-
-* **IV. Approximate Boundary： A by-product of mapping research (Features Upgrade 01 August 2021)**
-The Approximate Boundary uses Bounding Box and Polyline Offset (By Arend van Waart) to create an approximate boundary for unclosed polyline feature from OSM files (e.g., Walls / Parks with gates / etc.) Then users can operate containment tests through this closed approximate boundary. (e.g., Testing whether points are within some specific regions. )
-
-Mechanism 
-![Approximate Boundary](https://user-images.githubusercontent.com/88956151/131949100-d63a8ad1-ea69-49c8-89ca-625509645853.png)
-
+![ViewCapture20211010_224446](https://user-images.githubusercontent.com/88956151/136694848-9e875203-f4be-4820-9606-ddb7225b5149.jpg)
+Generated Boundary
 
 
 
 ## Project Structure (Ver 0.0.01)
 
-
+![Untitled-1](https://user-images.githubusercontent.com/88956151/134809513-3cfe97ab-c756-4fda-a2c3-e92ad8ac7fd9.jpg)
 
 
 ## Build Status
