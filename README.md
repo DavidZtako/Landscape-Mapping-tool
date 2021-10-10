@@ -10,7 +10,11 @@ This repository contains a guide for creating `README.md` files for new and exis
 This project is a landscape mapping tool analyzing public transportation systems based on Grasshopper of Rhinoceros. The main goal of this project is to develop a research pattern / Grasshopper battery compound that can test interactions of different parts of the public transportation system (Eg: Subways-Bus interchange / Subways operated by other companies / etc.). Data collected from Openstreetmap is the primary data source using for developing the mapping tool. The project mainly focuses on the relationships in the Tokyo railway transportation system, such as entrances density, lines and entrances from different operators, etc.  Meanwhile, visualization components would consistently discuss mapping visualization. Then the research process would introduce other sites to demonstrate the effectiveness of the project as the battery compound is finished.
 
 ## Instructions for Use
-https://youtu.be/JItMxwUybDs
+
+[![image](https://user-images.githubusercontent.com/88956151/136678810-0e0946c2-7c3d-4bab-bbae-ab53c50ce66a.png)](https://youtu.be/JItMxwUybDs)
+Click image to see the video
+
+
 Step_01: Download your own OSM file from Open Street Map and import the Path File.
 
 Step_02: Use the Grasshopper plugin Caribou to set the landscape elements as the starting point, the ending point, and the impenetrable boundary (This demo uses Building as the starting point, Healthcare as the ending point, and Tourism as the impenetrable boundary to simulate the need to find the nearest healthcare centre and avoid  crowded tourism area in case of an accident).
