@@ -2,9 +2,9 @@
 
 
 
-# README Guide
+# Project Description
+<----------->
 
-This repository contains a guide for creating `README.md` files for new and existing repositories. The sections below include suggestions for different areas that can be covered in a README file where appropriate.
 
 ## PROJECT DESCRIPTION (Ver 0.8.5)
 Octopus Pathfinder is a landscape mapping tool analyzing public transportation systems based on Grasshopper of Rhinoceros. The main goal of Octopus Pathfinder is to generate the shortest paths between two target points that are blocked by impenetrable boundaries in order to explore the specific possibilities of the movement of a given object in the map. At this stage, the starting point, the endpoint, and the shortest path's impenetrable boundary are based on various landscape elements provided by the Grasshopper plugin Caribou. The process of generating the tool is based on a specific assumption: when an accident occurs in landscape element A, 'Building', people need to be moved to landscape element B, 'Healthcare', at the shortest possible speed and, in addition, avoid moving close to the heavily trafficked landscape element C, 'Tourism'. Based on this assumption, Octopus Pathfinder aims to find the shortest paths in the transport network controlled by these three landscape elements.
@@ -31,7 +31,7 @@ The main pieces of functionality the project offers:
 
 ****I. The Shortest Path Component****
 
-* **The Shortest Path with Impenetrable Boundaries** 
+* **Looking for the shortest path between 'Building' and 'Healthcare' on road networks, path interrupted by' Tourism'.** 
 ![Untitled-1](https://user-images.githubusercontent.com/88956151/136695545-66e3e24a-3b5e-4176-aec9-82c750e599a0.gif)
 
 Test on Nairobi site
@@ -46,7 +46,7 @@ The earlier versions of The Shortest Path component is not easy to operate becau
 
 
 
- **II. Hazard Mapping (Flooding)**
+ **II. Topographical depressions as impenetrable boundary**
  
 Hazard Mapping is used to provide additional impenetrable boundary options. A topography file generated from open source DEM gets involved in the mapping process to create possible low land areas. The flood path result comes from the Groundhog Grasshopper add-in. But it is currently generating from a 30m DEM file, which means the current topography model is not accurate enough for analysis but only component exhibition. 
 ![ViewCapture20210926_215945](https://user-images.githubusercontent.com/88956151/134808462-0c0aeef7-d4b4-435d-924e-a8b7e4c6427a.jpg)
@@ -54,7 +54,7 @@ Hazard Mapping is used to provide additional impenetrable boundary options. A to
 
 
 
-* **III. Approximate Boundary： A by-product of mapping research (Features Upgrade 01 August 2021)**
+* **III. Creating a boundary for unclosed landscape features (e.g. old city wall)**
 Approximate boundary is a by-product of the Octopus Pathfinder development process. The main purpose of this component is to generate an approximate closed boundary for possible non-closed landscape features in the OSM file (walls that are not fully closed) for further analysis. Then users can operate containment tests through this closed approximate boundary. (e.g., Testing whether points are within some specific regions).
 
 ![ViewCapture20211010_224343](https://user-images.githubusercontent.com/88956151/136694844-885c6944-a508-40c0-b25e-9f5452523ed7.jpg)
