@@ -1,12 +1,7 @@
 # Octopus Pathfinder 
 
 
-
-# Project Description
-<----------->
-
-
-## PROJECT DESCRIPTION (Ver 0.8.5)
+# PROJECT DESCRIPTION (Ver 0.8.5)
 Octopus Pathfinder is a landscape mapping tool analyzing public transportation systems based on Grasshopper of Rhinoceros. The main goal of Octopus Pathfinder is to generate the shortest paths between two target points that are blocked by impenetrable boundaries in order to explore the specific possibilities of the movement of a given object in the map. At this stage, the starting point, the endpoint, and the shortest path's impenetrable boundary are based on various landscape elements provided by the Grasshopper plugin Caribou. The process of generating the tool is based on a specific assumption: when an accident occurs in landscape element A, 'Building', people need to be moved to landscape element B, 'Healthcare', at the shortest possible speed and, in addition, avoid moving close to the heavily trafficked landscape element C, 'Tourism'. Based on this assumption, Octopus Pathfinder aims to find the shortest paths in the transport network controlled by these three landscape elements.
 
 
@@ -26,12 +21,12 @@ Step_4: Move the number slider to find the starting points within one kilometre 
 
 Step_05: Input the generated path to the preview component, the colorized curves component or the line width component for the curve to get different results.
 
-## Project Features (Ver 0.0.5) (Upgraded 25 September 2021)
-The main pieces of functionality the project offers:
+## Project Features (Ver 1.0) 
+Main functionalities the project offers:
 
 ****I. The Shortest Path Component****
 
-* **Looking for the shortest path between 'Building' and 'Healthcare' on road networks, path interrupted by' Tourism'.** 
+* **Example: Looking for the shortest path between 'Building' and 'Healthcare' on road networks, path interrupted by' Tourism'.** 
 ![Untitled-1](https://user-images.githubusercontent.com/88956151/136695545-66e3e24a-3b5e-4176-aec9-82c750e599a0.gif)
 
 Test on Nairobi site
@@ -65,10 +60,10 @@ Generated Boundary
 
 
 
-## Project Structure (Ver 0.0.01)
+## Project Structure (Ver 1.0)
 
 ![Untitled-1](https://user-images.githubusercontent.com/88956151/134809513-3cfe97ab-c756-4fda-a2c3-e92ad8ac7fd9.jpg)
 
 
-## Build Status
-If your project has some sort of automation server set up to run tests against the project's latest build, then it is a good idea to include an image in your repository showing the status of the latest build e.g. the top of this guide. See the *Useful Resources* section below for some links to documentation on how to do this with popular build tools.
+## Notes
+When using your own OSM files for tool testing, the following parameters need to be noted in order to generate results correctly.
