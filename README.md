@@ -1,7 +1,7 @@
 # Octopus Pathfinder 
 
 
-# PROJECT DESCRIPTION (Ver 0.8.5)
+# PROJECT DESCRIPTION (Ver 1.0)
 Octopus Pathfinder is a landscape mapping tool analyzing public transportation systems based on Grasshopper of Rhinoceros. The main goal of Octopus Pathfinder is to generate the shortest paths between two target points that are blocked by impenetrable boundaries in order to explore the specific possibilities of the movement of a given object in the map. At this stage, the starting point, the endpoint, and the shortest path's impenetrable boundary are based on various landscape elements provided by the Grasshopper plugin Caribou. The process of generating the tool is based on a specific assumption: when an accident occurs in landscape element A, 'Building', people need to be moved to landscape element B, 'Healthcare', at the shortest possible speed and, in addition, avoid moving close to the heavily trafficked landscape element C, 'Tourism'. Based on this assumption, Octopus Pathfinder aims to find the shortest paths in the transport network controlled by these three landscape elements.
 
 
@@ -26,7 +26,7 @@ Main functionalities the project offers:
 
 ****I. The Shortest Path Component****
 
-* **Example: Looking for the shortest path between 'Building' and 'Healthcare' on road networks, path interrupted by' Tourism'.** 
+* **Example: Looking for the shortest path between landscape features 'Building' and 'Healthcare' on road networks, path interrupted by' Tourism'.** 
 ![Untitled-1](https://user-images.githubusercontent.com/88956151/136695545-66e3e24a-3b5e-4176-aec9-82c750e599a0.gif)
 
 Test on Nairobi site
@@ -66,4 +66,9 @@ Generated Boundary
 
 
 ## Notes
-When using your own OSM files for tool testing, the following parameters need to be noted in order to generate results correctly.
+When using your OSM files for tool testing, the following parameters need to be noted in order to generate results correctly.
+![Nairobi Shop   Cafe Cloest points and Scope3](https://user-images.githubusercontent.com/88956151/137605042-015299e9-ea2c-494a-a811-900500fc7f2c.jpg)
+
+A. When testing with your own OSM File, take care to control whether the value of the generated metaball is too large or too small. A metaball boundary that is too large may completely cover the road network and cause the calculation to fail.
+
+B. Take care that the curve used to find the start of the road strength is not too far from the start point.
